@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #22aa86;
+    --secondary-color: #9cc026;
+    --color-3: #44514e;
+    --color-sbg: #f2f4f4;
+    --color-sbg-alt: #fff;
+    --color-p-dark: rgba(0, 0, 0, 0.6);
+    --color-h-dark: rgba(0, 0, 0, 0.8);
+    --color-p-light: rgba(255, 255, 255, 0.8);
+    --color-h-light: rgba(255, 255, 255, 0.95);
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    color: var(--secondary-color);
+}
+
+.main {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-origin: border-box;
+}
+
+.main img {
+    filter: blur(0.8px);
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    background: var(--color-p-light);
+    box-shadow: 1px 5px 30px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title p {
+    color: var(--color-3);
+    font-size: 40px;
+}
+
+.title button {
+    width: 50px;
+    height: 10px;
+}
+
+.information {
+    margin: 15px 0px 0px 0px;
+}
+
+.information p {
+    font-size: 18px;
+    background: var(--color-h-light);
+    color: black;
+    text-justify: inter-word;
+}
+
+.imgg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information img,
+.ben {
+    width: 100%;
+}
+
+span {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(-500px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.hide {
+    opacity: 0;
+    transition: all 3s;
+}
+
+.shw {
+    opacity: 1;
+}
+
+@media screen and (max-width: 660px) {
+    .title p {
+        font-size: 30px;
+    }
+    .information p span {
+        font-size: 18px;
+    }
+    .information p {
+        font-size: 16px;
+    }
+}

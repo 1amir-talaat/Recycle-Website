@@ -1,0 +1,112 @@
+/* start globle rule */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat'), local('Montserrat'), url("../Montserrat/Montserrat-VariableFont_wght.ttf") format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat'), local('Montserrat'), url(../Montserrat/Montserrat-VariableFont_wght.ttf) format('woff');
+}
+
+:root {
+  --primary-color: #22aa86;
+  --secondary-color: #9cc026;
+  --color-3: #44514e;
+  --color-sbg: #f2f4f4;
+  --color-sbg-alt: #fff;
+  --color-p-dark: rgba(0, 0, 0, 0.6);
+  --color-h-dark: rgba(0, 0, 0, 0.8);
+  --color-p-light: rgba(255, 255, 255, 0.8);
+  --color-h-light: rgba(255, 255, 255, 0.95);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.svg-bottom {
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  z-index: 999;
+}
+
+.svg-top {
+  display: block;
+  position: absolute;
+  top: -1px;
+  z-index: 999;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 790px) {
+  .svg-bottom {
+    display: none;
+  }
+  .svg-top {
+    display: none;
+  }
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-p-dark);
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 99999999;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  visibility: hidden;
+  line-height: -5;
+}
+
+/* end globle rule */
