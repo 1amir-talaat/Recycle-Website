@@ -2,35 +2,52 @@ const logo = document.getElementById("inframe-logo")
 logo.addEventListener("click", () => {
     window.location.reload();
 })
+
 logo.onmouseover = function () {
-    logo.innerHTML = "INFrame";
     logo.style.transition = "all 1.2s ease-in-out";
+    logo.innerHTML = "INFrame";
+
 }
 logo.onmouseout = function () {
-    logo.innerHTML = "IN";
     logo.style.transition = "all 1.2s ease-in-out";
+    logo.innerHTML = "IN";
 }
 
-// mack up arrow 
+// up arrow code 
 let up = document.querySelector(".back-to-top")
+let navbar = document.getElementsByTagName("nav")[0]
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
+    if (scroll >= 100) {
+        navbar.style.transition = "0.4s"
+        navbar.classList.add("bg-dark")
+    }
+    else {
+        navbar.classList.remove("bg-dark")
+
+    }
     if (scroll >= 767) {
         up.style.visibility = "visible"
-        console.log("a7a");
     }
     else {
         up.style.visibility = "hidden"
-        console.log("a7aasdas");
-
     }
 });
 
-// mange slider code
+toggler = document.getElementById("toggler")
+toggler.onclick = function () {
+    navbar.classList.add("bg-dark")
+}
+
+// slider code
 var swiper = new Swiper(".swiper", {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 20,
+    speed: 1000,
+    autoplay: {
+        delay: 4000,
+    },
     direction: 'horizontal',
     loop: true,
     loopFillGroupWithBlank: true,
@@ -58,51 +75,3 @@ var swiper = new Swiper(".swiper", {
         },
     },
 });
-
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         console.log(entry);
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('show')
-//         }
-//         else {
-//             entry.target.classList.remove('show')
-//         }
-//     })
-// })
-
-// const hiddenElements = document.querySelectorAll('.hidden')
-// hiddenElements.forEach((el) => observer.observe(el))
-
-let observerr = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show')
-        }
-        else {
-            entry.target.classList.remove('show')
-        }
-    })
-})
-
-let hidden = document.querySelectorAll('.hidden')
-hidden.forEach((el) => observerr.observe(el))
-
-let hude = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('shw')
-        }
-        else {
-            entry.target.classList.remove('shw')
-        }
-    })
-})
-
-let hide = document.querySelectorAll('.hide')
-hide.forEach((el) => hude.observe(el))
-
-
-console.log("asdasdadas");

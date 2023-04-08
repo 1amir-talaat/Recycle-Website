@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- fontawesom link -->
+    <link rel="stylesheet" href="assets/Font Awesom/css/all.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- style file css -->
+    <link rel="stylesheet" href="assets/css/global rules.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+    <style>
+      /* start logo */
+      .logo_inframe a {
+        position: relative;
+        padding: 7px 7px;
+        color: var(--color-h-light);
+        font-size: 30px;
+        left: 0;
+      }
+
+      .logo_inframe * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+      }
+
+      .logo_inframe a:before,
+      .logo_inframe a:after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 15px;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+        opacity: 0;
+        color: var(--color-h-light);
+      }
+
+      .logo_inframe a:before {
+        right: 0;
+        top: 0;
+        border-right: 3px solid var(--color-p-dark);
+        border-top: 3px solid var(--color-p-dark);
+        -webkit-transform: translate(-100%, 50%);
+        transform: translate(-100%, 50%);
+      }
+
+      .logo_inframe a:after {
+        left: 0;
+        bottom: 0;
+        border-left: 3px solid var(--color-p-dark);
+        border-bottom: 3px solid var(--color-p-dark);
+        -webkit-transform: translate(100%, -50%);
+        transform: translate(100%, -50%);
+        color: var(--color-h-light);
+      }
+
+      .logo_inframe a:hover::before,
+      .logo_inframe a:hover:after {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        opacity: 1;
+        color: var(--color-h-light);
+      }
+
+      .logo_inframe:hover {
+        color: var(--color-h-light);
+      }
+      /* end logo */
+    </style>
+  </head>
+  <body>
+    <section class="heroSection" id="home">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+          <div class="logo_inframe navbar-brand">
+            <a href="#" class="text-light" id="inframe-logo">IN</a>
+          </div>
+          <button type="button" class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon" style="color: var(--primary-color)"></span>
+          </button>
+          <ul class="collapse navbar-nav navbar-collapse justify-content-end bg-dark" id="nav">
+            <li class="nav-item"><a href="#home" class="nav-link" style="color: var(--color-p-light)">home</a></li>
+            <li class="nav-item"><a href="#materials" class="nav-link" style="color: var(--color-p-light)">Solutions</a></li>
+            <li class="nav-item"><a href="#articles" class="nav-link" style="color: var(--color-p-light)">Articles</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link" style="color: var(--color-p-light)">contact</a></li>
+            <li class="nav-item"><a href="HTML/about.html" class="nav-link" style="color: var(--color-p-light)">about-us</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- hero content -->
+      <!-- hero texts -->
+      <div class="hero-text text-center">
+        <p class="hero-head" style="color: var(--color-h-light)">we safegaurd the envirnoment</p>
+        <p style="color: var(--color-p-light)">
+          There is no such thing as ‘away’. When we throw anything away it must go <br />
+          somewhere.
+        </p>
+        <a href="#materials" class="hero-button">our solutions</a>
+      </div>
+      <!-- hero last part -->
+      <div class="hero-last-p align-items-center">
+        <div class="container">
+          <div class="hero-last-part-text">
+            <div class="row">
+              <!-- water text -->
+              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                <i class="fa-solid fa-droplet display-5 mb-2 text-light"></i>
+                <p>our goal is to save about <span>70 billion</span> gallons of fresh water in 2027</p>
+              </div>
+              <!-- radiations -->
+              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                <i class="fa-solid fa-circle-radiation display-5 mb-2 text-light"></i>
+                <p>we need to avoid about <span>33 million</span> metric tons of GHG emmitions and the number are groeing</p>
+              </div>
+              <!-- recycle -->
+              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                <i class="fa-solid fa-recycle display-5 mb-2 text-light"></i>
+                <p>recycle hosted and participated in more than <span>9000 chartiable</span> events around the globe</p>
+              </div>
+              <!-- envirnoment -->
+              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
+                <i class="fa-solid fa-tree display-5 mb-2 text-light"></i>
+                <p>we saved <span>9000 chartiable</span> old trees by recycling old paper products and carboards</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1440 19">
+          <polygon
+            fill="#ffffff"
+            points="1422,18 1404,0 1386,18 1368,0 1350,18 1332,0 1314,18 1296,0 1278,18 1260,0 1242,18 1224,0 1206,18 1188,0 1170,18 1152,0 1134,18 1116,0 1098,18 1080,0 1062,18 1044,0 1026,18 1008,0 990,18 972,0 954,18 936,0 918,18 900,0 882,18 864,0 846,18 828,0 810,18 792,0 774,18 756,0 738,18 720,0 702,18 684,0 666,18 648,0 630,18 612,0 594,18 576,0 558,18 540,0 522,18 504,0 486,18 468,0 450,18 432,0 414,18 396,0 378,18 360,0 342,18 324,0 306,18 288,0 270,18 252,0 234,18 216,0 198,18 180,0 162,18 144,0 126,18 108,0 90,18 72,0 54,18 36,0 18,18 0,0 0,19 1440,19 1440,0 "
+          ></polygon>
+        </svg>
+      </div>
+    </section>
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- main file js -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -4,95 +4,94 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <!-- bootstrap icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
-      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
-      crossorigin="anonymous"
-    />
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!-- fontawesom link -->
-    <link rel="stylesheet" href="assets/fontawesome-free-6.3.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="assets/Font Awesom/css/all.css" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <!-- style file css -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>recycle</title>
   </head>
   <body>
     <a class="text-light back-to-top" href="#home">^</a>
-    <section class="heroSection" id="home">
-      <!-- navbar -->
-      <div class="container">
-        <nav class="navbar navbar-expand-md navbar-dark">
-          <div class="logo_inframe">
-            <a href="#" class="navbar-brand text-light" id="inframe-logo"> IN</a>
-          </div>
-          <button type="button" class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon" style="color: var(--primary-color)"></span>
-          </button>
-          <ul class="collapse navbar-nav navbar-collapse justify-content-end" id="nav">
-            <li class="nav-item"><a href="#home" class="nav-link" style="color: var(--color-p-light)">home</a></li>
-            <li class="nav-item"><a href="#materials" class="nav-link" style="color: var(--color-p-light)">Solutions</a></li>
-            <li class="nav-item"><a href="#articles" class="nav-link" style="color: var(--color-p-light)">Articles</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link" style="color: var(--color-p-light)">contact</a></li>
-            <li class="nav-item"><a href="HTML/about.html" class="nav-link" style="color: var(--color-p-light)">about-us</a></li>
-          </ul>
-        </nav>
-        <!-- hero content -->
-        <!-- hero texts -->
-        <div class="hero-text text-center">
-          <p class="hero-head" style="color: var(--color-h-light)">we safegaurd the envirnoment</p>
-          <p style="color: var(--color-p-light)">
-            There is no such thing as ‘away’. When we throw anything away it must go <br />
-            somewhere.
-          </p>
-          <a href="#materials" class="hero-button">our solutions</a>
-        </div>
-      </div>
-      <!-- hero last part -->
-      <div class="hero-last-p align-items-center">
+    <!-- start header -->
+    <header id="home" class="top">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top top-0">
         <div class="container">
-          <div class="hero-last-part-text">
-            <div class="row">
-              <!-- water text -->
-              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
-                <i class="fa-solid fa-droplet display-5 mb-2 text-light"></i>
-                <p>our goal is to save about <span>70 billion</span> gallons of fresh water in 2027</p>
-              </div>
-              <!-- radiations -->
-              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
-                <i class="fa-solid fa-circle-radiation display-5 mb-2 text-light"></i>
-                <p>we need to avoid about <span>33 million</span> metric tons of GHG emmitions and the number are groeing</p>
-              </div>
-              <!-- recycle -->
-              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
-                <i class="fa-solid fa-recycle display-5 mb-2 text-light"></i>
-                <p>recycle hosted and participated in more than <span>9000 chartiable</span> events around the globe</p>
-              </div>
-              <!-- envirnoment -->
-              <div class="col-xs-12 col-sm-6 col-md-3 text-center">
-                <i class="fa-solid fa-tree display-5 mb-2 text-light "></i>
-                <p>we saved <span>9000 chartiable</span> old trees by recycling old paper products and carboards</p>
-              </div>
+          <div class="logo_inframe navbar-brand">
+            <a href="#" class="text-light" id="inframe-logo">IN</a>
+          </div>
+          <button class="navbar-toggler" id="toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end text-center" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Solutions">material</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#articles">Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About-us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="hero position-relative">
+        <div class="hero-text d-flex align-content-center text-center justify-content-center flex-column">
+          <div class="container">
+            <h1 class="hero-head">we safegaurd the envirnoment</h1>
+            <p>
+              There is no such thing as ‘away’. When we throw anything away it must go <br />
+              somewhere.
+            </p>
+          </div>
+        </div>
+        <div class="hero-last">
+          <div class="container">
+            <!-- water text -->
+            <div class="text-center hero-last-card">
+              <i class="fa-solid fa-droplet display-5 mb-2 text-light"></i>
+              <p>our goal is to save about <span>70 billion</span> gallons of fresh water in 2027</p>
+            </div>
+            <!-- radiations -->
+            <div class="text-center hero-last-card">
+              <i class="fa-solid fa-circle-radiation display-5 mb-2 text-light"></i>
+              <p>we need to avoid about <span>33 million</span> metric tons of GHG emmitions and the number are groeing</p>
+            </div>
+            <!-- recycle -->
+            <div class="text-center hero-last-card">
+              <i class="fa-solid fa-recycle display-5 mb-2 text-light"></i>
+              <p>recycle hosted and participated in more than <span>9000 chartiable</span> events around the globe</p>
+            </div>
+            <!-- envirnoment -->
+            <div class="text-center hero-last-card">
+              <i class="fa-solid fa-tree display-5 mb-2 text-light"></i>
+              <p>we saved <span>9000 chartiable</span> old trees by recycling old paper products and carboards</p>
             </div>
           </div>
         </div>
-        <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1440 19">
-          <polygon
-            fill="#ffffff"
-            points="1422,18 1404,0 1386,18 1368,0 1350,18 1332,0 1314,18 1296,0 1278,18 1260,0 1242,18 1224,0 1206,18 1188,0 1170,18 1152,0 1134,18 1116,0 1098,18 1080,0 1062,18 1044,0 1026,18 1008,0 990,18 972,0 954,18 936,0 918,18 900,0 882,18 864,0 846,18 828,0 810,18 792,0 774,18 756,0 738,18 720,0 702,18 684,0 666,18 648,0 630,18 612,0 594,18 576,0 558,18 540,0 522,18 504,0 486,18 468,0 450,18 432,0 414,18 396,0 378,18 360,0 342,18 324,0 306,18 288,0 270,18 252,0 234,18 216,0 198,18 180,0 162,18 144,0 126,18 108,0 90,18 72,0 54,18 36,0 18,18 0,0 0,19 1440,19 1440,0 "
-          ></polygon>
-        </svg>
       </div>
-    </section>
-    <!-- end hero -->
+      <div class="rec"></div>
+      <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1440 19">
+        <polygon
+          fill="#ffffff"
+          points="1422,18 1404,0 1386,18 1368,0 1350,18 1332,0 1314,18 1296,0 1278,18 1260,0 1242,18 1224,0 1206,18 1188,0 1170,18 1152,0 1134,18 1116,0 1098,18 1080,0 1062,18 1044,0 1026,18 1008,0 990,18 972,0 954,18 936,0 918,18 900,0 882,18 864,0 846,18 828,0 810,18 792,0 774,18 756,0 738,18 720,0 702,18 684,0 666,18 648,0 630,18 612,0 594,18 576,0 558,18 540,0 522,18 504,0 486,18 468,0 450,18 432,0 414,18 396,0 378,18 360,0 342,18 324,0 306,18 288,0 270,18 252,0 234,18 216,0 198,18 180,0 162,18 144,0 126,18 108,0 90,18 72,0 54,18 36,0 18,18 0,0 0,19 1440,19 1440,0 "
+        ></polygon>
+      </svg>
+    </header>
+    <!-- end header -->
 
     <!-- start material  -->
     <section class="material" id="materials">
@@ -174,9 +173,7 @@
                       <span class="separator">|</span>
                       <span class="entry-meta"> Recycling </span>
                     </div>
-
                     <h4 class="item-title primary-hover">Recycling basics</h4>
-
                     <div class="excerpt">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida fringilla neque sit amet sollicitudin. Duis aliquam
@@ -328,8 +325,7 @@
       </footer>
     </section>
     <!-- end footer -->
-    <!-- fontawesom -->
-    <script src="assets/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+
     <!-- bootstrap js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
