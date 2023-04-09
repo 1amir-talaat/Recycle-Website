@@ -1,16 +1,4 @@
 /* start general things */
-:root {
-  --primary-color: #22aa86;
-  --secondary-color: #9cc026;
-  --color-3: #44514e;
-  --color-sbg: #f2f4f4;
-  --color-sbg-alt: #fff;
-  --color-p-dark: rgba(0, 0, 0, 0.6);
-  --color-h-dark: rgba(0, 0, 0, 0.8);
-  --color-p-light: rgba(221, 221, 221, 0.8);
-  --color-h-light: rgba(255, 255, 255, 0.95);
-}
-
 .svg-bottom {
   display: block;
   position: absolute;
@@ -190,7 +178,6 @@ header {
 }
 
 .hero-last .container {
-  color: var(--color-h-light);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -456,7 +443,7 @@ header .rec {
   height: 100%;
 }
 
-.articles .articles-text {
+.articles .articles-text{
   padding: 90px 30px 40px 30px;
 }
 
@@ -592,6 +579,83 @@ header .rec {
   color: var(--color-h-light);
 }
 /* end article */
+
+/* start news  */
+.news {
+  background-color: var(--color-sbg-alt);
+  padding: 90px 30px ;
+}
+.news-text h2 {
+  font-size: 38px;
+  color: var(--color-h-dark);
+  position: relative;
+  text-align: center;
+}
+.news-text p {
+  font-size: 22px;
+  color: var(--color-p-dark);
+  position: relative;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.news form {
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.input-g {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.input-g input[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--color-h-light);
+  border: none;
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.input-g {
+  position: relative;
+}
+
+.input-g input {
+  padding: 13px;
+}
+
+.input-g i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+}
+@media (max-width: 1000px) {
+  .news form {
+    display: block;
+  }
+  
+  .input-g input {
+    margin-top: 20px;
+  }
+
+  .input-g input[type="submit"] {
+    margin: 20px auto;
+  }
+
+  .input-g i {
+    right: 15px;
+    top: 60%;
+  }
+}
+/* end news */
 
 /* Footer */
 .footer .container {

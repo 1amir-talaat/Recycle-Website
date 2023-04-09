@@ -10,9 +10,9 @@
   --color-3: #44514e;
   --color-sbg: #f2f4f4;
   --color-sbg-alt: #fff;
-  --color-p-dark: rgba(0, 0, 0, 0.6);
+  --color-p-dark: rgba(32, 32, 32, 0.6);
   --color-h-dark: rgba(0, 0, 0, 0.8);
-  --color-p-light: rgba(255, 255, 255, 0.8);
+  --color-p-light: rgba(221, 221, 221, 0.8);
   --color-h-light: rgba(255, 255, 255, 0.95);
 }
 
@@ -43,5 +43,13 @@ a {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #37ae768a;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem #37ae768a;
 }
 /* end globle rule */
