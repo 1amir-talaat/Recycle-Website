@@ -443,7 +443,7 @@ header .rec {
   height: 100%;
 }
 
-.articles .articles-text{
+.articles .articles-text {
   padding: 90px 30px 40px 30px;
 }
 
@@ -583,20 +583,32 @@ header .rec {
 /* start news  */
 .news {
   background-color: var(--color-sbg-alt);
-  padding: 90px 30px ;
+  padding: 90px 30px;
+  padding-bottom: 20px;
 }
+
 .news-text h2 {
-  font-size: 38px;
+  font-size: 40px;
   color: var(--color-h-dark);
   position: relative;
   text-align: center;
 }
 .news-text p {
-  font-size: 22px;
+  font-size: 18px;
   color: var(--color-p-dark);
   position: relative;
   text-align: center;
   letter-spacing: 1.2px;
+}
+
+.form-alert { 
+  text-align: left;
+  margin-bottom: -40px;
+  visibility: hidden;
+}
+
+.news-success {
+  visibility: hidden;
 }
 
 .news form {
@@ -641,7 +653,7 @@ header .rec {
   .news form {
     display: block;
   }
-  
+
   .input-g input {
     margin-top: 20px;
   }

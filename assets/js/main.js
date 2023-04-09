@@ -75,3 +75,30 @@ var swiper = new Swiper(".swiper", {
         },
     },
 });
+
+// news form validation
+let newsForm = document.forms["newsForm"]
+let newsAlere = document.getElementById("form-alert")
+let newsSuccess = document.getElementById("news-success")
+
+newsForm.onsubmit = function (e) {
+    e.preventDefault()
+
+    let name = newsForm.name.value
+    let email = newsForm.email.value
+    if (name == "") {
+        newsAlere.style.visibility = "visible"
+    }
+    else if (email == "") {
+        newsAlere.style.visibility = "visible"
+    }
+    else {
+        Email.send({
+            SecureToken: "10d3d4fa-c691-4a78-be23-07093b05e4c7",
+            To: email,
+            From: "hsiwh2be872b@gmail.com",
+            Subject: "This issdfsdf the subject",
+            Body: "And fsdfsdf is the body"
+        })
+    }
+}
