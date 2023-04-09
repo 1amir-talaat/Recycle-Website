@@ -4,6 +4,7 @@
   position: absolute;
   bottom: -1px;
   z-index: 999;
+  right: 0px;
 }
 
 .svg-top {
@@ -12,6 +13,7 @@
   top: -1px;
   z-index: 999;
   transform: rotate(180deg);
+  right: 0px;
 }
 
 @media (max-width: 790px) {
@@ -585,6 +587,12 @@ header .rec {
   background-color: var(--color-sbg-alt);
   padding: 90px 30px;
   padding-bottom: 20px;
+  position: relative;
+}
+
+.news .svg-bottom {
+  width: calc(100% + 30px);
+  left: -15px;
 }
 
 .news-text h2 {
@@ -601,9 +609,9 @@ header .rec {
   letter-spacing: 1.2px;
 }
 
-.form-alert { 
+.form-alert {
   text-align: left;
-  margin-bottom: -40px;
+  margin-bottom: -30px;
   visibility: hidden;
 }
 
@@ -654,7 +662,7 @@ header .rec {
     display: block;
   }
 
-  .input-g input {
+  .input-g input:not(input[type="text"]) {
     margin-top: 20px;
   }
 

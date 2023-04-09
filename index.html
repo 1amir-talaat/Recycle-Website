@@ -288,6 +288,7 @@
 
     <!-- start news -->
     <section class="news text-center text-capitalize">
+      <div class="overlay"></div>
       <div class="container">
         <div class="news-text">
           <h2>THE RECYCLE NEWSLETTER</h2>
@@ -307,20 +308,20 @@
             <input type="submit" name="submit" class="btn btn-success" value="Subscribe" />
           </div>
         </form>
-        <p class="news-success mt-4 w-50 m-auto alert alert-success alert-dismissible" role="alert" id="news-success">
+        <p class="news-success mt-4 mb-4 w-75 m-auto alert alert-success alert-dismissible" role="alert" id="news-success">
           <strong>Subscribe Success</strong> We send to you a Welcome Messege
         </p>
       </div>
+      <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1440 19">
+        <polygon
+          fill="#24262b"
+          points="1422,18 1404,0 1386,18 1368,0 1350,18 1332,0 1314,18 1296,0 1278,18 1260,0 1242,18 1224,0 1206,18 1188,0 1170,18 1152,0 1134,18 1116,0 1098,18 1080,0 1062,18 1044,0 1026,18 1008,0 990,18 972,0 954,18 936,0 918,18 900,0 882,18 864,0 846,18 828,0 810,18 792,0 774,18 756,0 738,18 720,0 702,18 684,0 666,18 648,0 630,18 612,0 594,18 576,0 558,18 540,0 522,18 504,0 486,18 468,0 450,18 432,0 414,18 396,0 378,18 360,0 342,18 324,0 306,18 288,0 270,18 252,0 234,18 216,0 198,18 180,0 162,18 144,0 126,18 108,0 90,18 72,0 54,18 36,0 18,18 0,0 0,19 1440,19 1440,0 "
+        ></polygon>
+      </svg>  
     </section>
     <!-- end news -->
     <!-- start footer -->
     <section id="footer">
-      <svg class="svg-top" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1440 19">
-        <polygon
-          fill="#ffffff"
-          points="1422,18 1404,0 1386,18 1368,0 1350,18 1332,0 1314,18 1296,0 1278,18 1260,0 1242,18 1224,0 1206,18 1188,0 1170,18 1152,0 1134,18 1116,0 1098,18 1080,0 1062,18 1044,0 1026,18 1008,0 990,18 972,0 954,18 936,0 918,18 900,0 882,18 864,0 846,18 828,0 810,18 792,0 774,18 756,0 738,18 720,0 702,18 684,0 666,18 648,0 630,18 612,0 594,18 576,0 558,18 540,0 522,18 504,0 486,18 468,0 450,18 432,0 414,18 396,0 378,18 360,0 342,18 324,0 306,18 288,0 270,18 252,0 234,18 216,0 198,18 180,0 162,18 144,0 126,18 108,0 90,18 72,0 54,18 36,0 18,18 0,0 0,19 1440,19 1440,0 "
-        ></polygon>
-      </svg>
       <footer class="footer">
         <div class="container">
           <div class="row">
@@ -358,8 +359,9 @@
       </footer>
     </section>
     <!-- end footer -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
+    <!-- smtpjs -->
+    <script src="assets/js/smtp.js"></script>
     <!-- bootstrap js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->

@@ -13,6 +13,20 @@ logo.onmouseout = function () {
     logo.innerHTML = "IN";
 }
 
+window.onload = function (e) {
+    let scroll = this.scrollY;
+    if (scroll >= 100) {
+        navbar.style.transition = "0.4s"
+        navbar.classList.add("bg-dark")
+        navbar.style.opacity = "0.95"
+
+    }
+    else {
+        navbar.classList.remove("bg-dark")
+        navbar.style.opacity = "1"
+    }
+}
+
 // up arrow code 
 let up = document.querySelector(".back-to-top")
 let navbar = document.getElementsByTagName("nav")[0]
@@ -21,8 +35,10 @@ window.addEventListener("scroll", (event) => {
     if (scroll >= 100) {
         navbar.style.transition = "0.4s"
         navbar.classList.add("bg-dark")
+        navbar.style.opacity = "0.95"
     }
     else {
+        navbar.style.opacity = "1"
         navbar.classList.remove("bg-dark")
 
     }
@@ -93,12 +109,24 @@ newsForm.onsubmit = function (e) {
         newsAlere.style.visibility = "visible"
     }
     else {
-        Email.send({
-            SecureToken: "10d3d4fa-c691-4a78-be23-07093b05e4c7",
-            To: email,
-            From: "hsiwh2be872b@gmail.com",
-            Subject: "This issdfsdf the subject",
-            Body: "And fsdfsdf is the body"
-        })
+        if (navigator.onLine) {
+            Email.send({
+                SecureToken: "10d3d4fa-c691-4a78-be23-07093b05e4c7",
+                To: email,
+                From: "hsiwh2be872b@gmail.com",
+                Subject: "This issdfsdf the subject",
+                Body: "And fsdfsdf is the body"
+            })
+            newsSuccess.style.visibility = "visible"
+            setTimeout(() => {
+                newsSuccess.style.visibility = "hidden"
+
+            }, 4000);
+        }
+        else {
+            newsAlere.innerHTML = "* Connection Error Please Check Your Internet Connection and Try Again"
+            newsAlere.style.visibility = "visible"
+        }
+
     }
 }
