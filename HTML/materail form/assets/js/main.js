@@ -45,7 +45,7 @@ const progressCheck = document.querySelectorAll(".step .check");
 const bullet = document.querySelectorAll(".step .bullet");
 let current = 1;
 
-nextBtnFirst.addEventListener("click", function(event){
+nextBtnFirst.addEventListener("click", function (event) {
   event.preventDefault();
   slidePage.style.marginLeft = "-25%";
   bullet[current - 1].classList.add("active");
@@ -53,7 +53,7 @@ nextBtnFirst.addEventListener("click", function(event){
   progressText[current - 1].classList.add("active");
   current += 1;
 });
-nextBtnSec.addEventListener("click", function(event){
+nextBtnSec.addEventListener("click", function (event) {
   event.preventDefault();
   slidePage.style.marginLeft = "-50%";
   bullet[current - 1].classList.add("active");
@@ -61,7 +61,7 @@ nextBtnSec.addEventListener("click", function(event){
   progressText[current - 1].classList.add("active");
   current += 1;
 });
-nextBtnThird.addEventListener("click", function(event){
+nextBtnThird.addEventListener("click", function (event) {
   event.preventDefault();
   slidePage.style.marginLeft = "-75%";
   bullet[current - 1].classList.add("active");
@@ -69,18 +69,18 @@ nextBtnThird.addEventListener("click", function(event){
   progressText[current - 1].classList.add("active");
   current += 1;
 });
-submitBtn.addEventListener("click", function(){
+submitBtn.addEventListener("click", function () {
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
   current += 1;
-  setTimeout(function(){
+  setTimeout(function () {
     alert("Your Form Successfully Signed up");
-    location.reload();
-  },800);
+    window.location.href = "../../index.html";
+  }, 800);
 });
 
-prevBtnSec.addEventListener("click", function(event){
+prevBtnSec.addEventListener("click", function (event) {
   event.preventDefault();
   slidePage.style.marginLeft = "0%";
   bullet[current - 2].classList.remove("active");
@@ -88,7 +88,7 @@ prevBtnSec.addEventListener("click", function(event){
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
-prevBtnThird.addEventListener("click", function(event){
+prevBtnThird.addEventListener("click", function (event) {
   event.preventDefault();
   slidePage.style.marginLeft = "-25%";
   bullet[current - 2].classList.remove("active");
@@ -96,7 +96,7 @@ prevBtnThird.addEventListener("click", function(event){
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
-prevBtnFourth.addEventListener("click", function(event){
+prevBtnFourth.addEventListener("click", function (event) {
   event.preventDefault();
   slidePage.style.marginLeft = "-50%";
   bullet[current - 2].classList.remove("active");
