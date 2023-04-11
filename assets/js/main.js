@@ -15,15 +15,26 @@ logo.onmouseout = function () {
 
 window.onload = function (e) {
     let scroll = this.scrollY;
-    if (scroll >= 100) {
-        navbar.style.transition = "0.4s"
-        navbar.classList.add("bg-dark")
-        navbar.style.opacity = "0.95"
-
+    if (document.title == "recycle") {
+        if (scroll >= 100) {
+            navbar.style.transition = "0.4s"
+            navbar.classList.add("bg-dark")
+            navbar.style.opacity = "0.95"
+        }
+        else {
+            navbar.style.opacity = "1"
+            navbar.classList.remove("bg-dark")
+        }
     }
     else {
-        navbar.classList.remove("bg-dark")
-        navbar.style.opacity = "1"
+        if (scroll >= 100) {
+            navbar.style.opacity = "0.95"
+
+        }
+        else {
+            navbar.style.opacity = "1"
+
+        }
     }
 }
 
@@ -32,16 +43,28 @@ let up = document.querySelector(".back-to-top")
 let navbar = document.getElementsByTagName("nav")[0]
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
-    if (scroll >= 100) {
-        navbar.style.transition = "0.4s"
-        navbar.classList.add("bg-dark")
-        navbar.style.opacity = "0.95"
+    if (document.title == "recycle") {
+        if (scroll >= 100) {
+            navbar.style.transition = "0.4s"
+            navbar.classList.add("bg-dark")
+            navbar.style.opacity = "0.95"
+        }
+        else {
+            navbar.style.opacity = "1"
+            navbar.classList.remove("bg-dark")
+        }
     }
     else {
-        navbar.style.opacity = "1"
-        navbar.classList.remove("bg-dark")
+        if (scroll >= 100) {
+            navbar.style.opacity = "0.95"
 
+        }
+        else {
+            navbar.style.opacity = "1"
+
+        }
     }
+
     if (scroll >= 767) {
         up.style.visibility = "visible"
     }
@@ -109,13 +132,15 @@ newsForm.onsubmit = function (e) {
         newsAlere.style.visibility = "visible"
     }
     else {
+        newsAlere.style.visibility = "hidden"
+
         if (navigator.onLine) {
             Email.send({
-                SecureToken: "10d3d4fa-c691-4a78-be23-07093b05e4c7",
+                SecureToken: "cbb5e9c1-49d6-430b-b69e-43dc0c982621",
                 To: email,
                 From: "hsiwh2be872b@gmail.com",
-                Subject: "This issdfsdf the subject",
-                Body: "And fsdfsdf is the body"
+                Subject: `Hello ${name}`,
+                Body: `Hello and welocme to our companye`
             })
             newsSuccess.style.visibility = "visible"
             setTimeout(() => {
@@ -127,6 +152,44 @@ newsForm.onsubmit = function (e) {
             newsAlere.innerHTML = "* Connection Error Please Check Your Internet Connection and Try Again"
             newsAlere.style.visibility = "visible"
         }
-
     }
 }
+
+// progress
+let cart = document.getElementsByClassName("services-chart")[0]
+let progressBars = document.getElementsByClassName("progress-bar")
+
+
+function showProgress(progressBar1) {
+        const value = progressBar1.dataset.progress
+        progressBar1.style.opacity = "1";
+        progressBar1.style.width = value + "%"
+}
+
+function hideProgress(p) {
+        p.style.opacity = 0;
+        p.style.width = 0
+}
+
+window.addEventListener("scroll", () => {
+    for (progress of progressBars) {
+        const sectionpos = progress.getBoundingClientRect().top + 20
+        const screenpos = window.innerHeight
+        if (screenpos > sectionpos) {
+            showProgress(progress)
+        }
+        else {
+            hideProgress(progress)
+        }
+    }
+    // const sectionpos = cart.getBoundingClientRect().top - 500
+    // const screenpos = window.innerHeight / 2
+
+    // if (sectionpos < screenpos) {
+    //     console.log("test");
+    //     showProgress()
+    // }
+    // else {
+    //     hideProgress()
+    // }
+})
