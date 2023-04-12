@@ -220,6 +220,7 @@ a {
   margin-left: 25px;
   font-size: 22px;
   color: var(--color-h-light);
+  text-transform: capitalize;
 }
 
 .nav-item a:hover {
@@ -889,13 +890,14 @@ a {
   border: 2px solid var(--footer-button-color);
   border-radius: 6px;
   padding: 0.75rem 3rem;
-  font-weight: 700;
-  transition: all 0.5s ease;
+  font-weight: 600;
+  transition: background-color 0.5s ease;
 }
 
 #footer .contact-us:hover {
-  background-color: var(----footer-button-color);
-  color: var(----footer-second-font-color) !important;
+  /* font-weight: 600; */
+  color: var(--footer-second-font-color) !important;
+  background-color: var(--footer-button-color);
 }
 
 #footer .head {
@@ -926,8 +928,8 @@ a {
 
 .footer-list a {
   font-size: 1.2rem;
-  font-weight: 600;
-  transition: all 0.5s ease;
+  /* font-weight: 600; */
+  transition: all 0.5s ease !important;
 }
 
 .footer-list li a:hover {
@@ -957,7 +959,7 @@ a {
   #footer .contents > div {
     width: calc(100%);
   }
-  .button,
+  .contact-us-btn,
   .footer-list,
   .icons-container {
     padding-left: 1.5rem !important;
