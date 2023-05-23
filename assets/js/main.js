@@ -11,6 +11,7 @@ logo.onmouseout = function () {
   logo.style.transition = "all 1.2s ease-in-out";
   logo.innerHTML = "IN";
 };
+// that is the logo animation 
 
 window.onload = function (e) {
   let scroll = this.scrollY;
